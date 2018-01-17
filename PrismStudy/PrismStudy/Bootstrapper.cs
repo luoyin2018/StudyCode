@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
+using PrismStudy.Views;
 
 namespace PrismStudy
 {
+    //Step 1:Nuget下载包Prism.WPF和Prism.Unity.Wpf,实现自己的Bootstrpper
     class Bootstrapper:UnityBootstrapper
     {
         protected override DependencyObject CreateShell()
