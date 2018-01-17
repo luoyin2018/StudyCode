@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfStudy", "WpfStudy\WpfStudy.csproj", "{EDD27A12-F9B0-4766-AAC5-A1B4A55E4E54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationPage", "NavigationPage\NavigationPage.csproj", "{70DB5352-5169-4A1A-8313-4212E93E0164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDD27A12-F9B0-4766-AAC5-A1B4A55E4E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD27A12-F9B0-4766-AAC5-A1B4A55E4E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD27A12-F9B0-4766-AAC5-A1B4A55E4E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD27A12-F9B0-4766-AAC5-A1B4A55E4E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DB5352-5169-4A1A-8313-4212E93E0164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DB5352-5169-4A1A-8313-4212E93E0164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DB5352-5169-4A1A-8313-4212E93E0164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DB5352-5169-4A1A-8313-4212E93E0164}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

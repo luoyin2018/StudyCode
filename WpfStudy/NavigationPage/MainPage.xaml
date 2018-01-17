@@ -1,0 +1,45 @@
+﻿<Page x:Class="NavigationPage.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NavigationPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MainPage"
+      WindowTitle="导航示例">
+    <StackPanel>
+        <TextBlock Margin="0,16">使用Hyperlink方式进行页面导航</TextBlock>
+        <Grid Margin="16,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0">
+            <Hyperlink NavigateUri="PageWithWindowTitle.xaml">1.导航到其他设置WindowTitle属性的页面</Hyperlink>
+            </TextBlock>
+            <TextBlock Grid.Row="1">
+            <Hyperlink NavigateUri="PageWithoutWindowTitle.xaml">2.导航到未设置WindowTitle属性的页面</Hyperlink>
+            </TextBlock>
+            <TextBlock Grid.Row="2">
+            <Hyperlink NavigateUri="http://www.baidu.com">3.导航到百度</Hyperlink>
+            </TextBlock>
+            <TextBlock Grid.Row="3">
+            <Hyperlink NavigateUri="http://www.baidubaidubaidu.com">4.导航到不可达页面，需要处理异常(处理Application的NavigationFailed事件)</Hyperlink>
+            </TextBlock>
+            <TextBlock Grid.Row="4">
+            注:Page类不有阻止用户导航到特定的页面和站点，也不能使用HTML DOM与Web页面交互。需要这些功能，可以使用.net 4.5 中WPF自带的WebBrowser控件
+            </TextBlock>
+        </Grid>
+
+        <TextBlock Margin="0,16">还可使用Hyperlink方式进行片段导航</TextBlock>
+        <StackPanel>
+            <TextBlock>
+                <Hyperlink NavigateUri="FragmentNavigatePage.xaml#Fragment">片段导航（也支持页内导航)</Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Page>
