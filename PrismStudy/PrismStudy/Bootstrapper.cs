@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Prism.Unity;
+using Prism.Modularity;
 using Microsoft.Practices.Unity;
 using PrismStudy.Views;
 
@@ -20,6 +21,11 @@ namespace PrismStudy
         protected override void InitializeShell()
         {
             Application.Current.MainWindow.Show();
+        }
+
+        protected override void ConfigureModuleCatalog()
+        {
+           
         }
     }
 }
