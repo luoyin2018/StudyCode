@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfStudy.Properties
+namespace UseResources.Properties
 {
 
 
