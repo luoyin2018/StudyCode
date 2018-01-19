@@ -24,5 +24,18 @@ namespace NavigationPage
         {
             InitializeComponent();
         }
+
+        private void Hyperlink_click(object sender, RoutedEventArgs e)
+        {
+            PageFunction<string> pf = new SelectPageFunction();
+            pf.Return += Pf_Return;
+            NavigationService.Navigate(pf);
+        }
+
+        private void Pf_Return(object sender, ReturnEventArgs<string> e)
+        {
+            if(e == null) return;
+            this.SelectedContent.Text = e.Result;
+        }
     }
 }
