@@ -37,17 +37,17 @@
 
         <Border Height="1" Background="Black" Margin="0,8"/>
         <TextBlock Margin="0,16">还可使用Hyperlink方式进行片段导航</TextBlock>
-        <StackPanel>
+        <StackPanel Margin="16,0">
             <TextBlock>
                 <Hyperlink NavigateUri="FragmentNavigatePage.xaml#Fragment">片段导航（也支持页内导航)</Hyperlink>
             </TextBlock>
         </StackPanel>
         <Border Height="1" Background="Black" Margin="0,8"/>
-        <TextBlock>使用PageFunction</TextBlock>
-        <TextBlock>
-            <Hyperlink Click="Hyperlink_click">点击这里选择</Hyperlink>
-        </TextBlock>
-        <StackPanel Orientation="Horizontal">
+        <TextBlock Margin="0,16">使用PageFunction</TextBlock>
+        <StackPanel Margin="16,0">
+            <TextBlock>
+                <Hyperlink Click="Hyperlink_click">点击这里选择</Hyperlink>
+            </TextBlock>
             <TextBlock>选择的内容:</TextBlock>
             <TextBlock x:Name="SelectedContent" Foreground="Red" FontSize="20"></TextBlock>
         </StackPanel>
