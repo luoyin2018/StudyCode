@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationPage", "Navigatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseResources", "UseResources\UseResources.csproj", "{F2351001-A8DF-4186-AE01-89637F27E436}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XBAPinBrowser", "XBAPinBrowser\XBAPinBrowser.csproj", "{6A9E4528-1F03-4341-9E99-D7FEC6783F20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F2351001-A8DF-4186-AE01-89637F27E436}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2351001-A8DF-4186-AE01-89637F27E436}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2351001-A8DF-4186-AE01-89637F27E436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9E4528-1F03-4341-9E99-D7FEC6783F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9E4528-1F03-4341-9E99-D7FEC6783F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9E4528-1F03-4341-9E99-D7FEC6783F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9E4528-1F03-4341-9E99-D7FEC6783F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
