@@ -1,0 +1,27 @@
+﻿<Window x:Class="Drawing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Drawing"
+        mc:Ignorable="d"
+        Title="MainWindow" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>在Grid中的Shape:</TextBlock>
+        <Rectangle Height="20" Width="20" Fill="Blue" Stroke="Black" StrokeThickness="2" />
+        <Line X1="50" Y1="200" X2="400" Y2="0" StrokeThickness="2" Stroke="DarkBlue"></Line>
+
+        <TextBlock Grid.Row="1" VerticalAlignment="Top">在Canvas中的Shape:</TextBlock>
+        <Canvas Grid.Row="1">
+            <Ellipse Width="100" Height="50" Canvas.Left="50" Canvas.Top="100" Fill="Black" ></Ellipse>
+            <Line X1="300" Y1="200" X2="200" Y2="100" Stroke="Red" StrokeThickness="4"/>
+            <Polyline Canvas.Left="50" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" Fill="Blue" ></Polyline>
+            <Polygon Canvas.Left="200" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" Fill="Blue" ></Polygon>
+            <Polyline Canvas.Top="200" Canvas.Left="200" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" StrokeDashArray="3 0.5" StrokeDashOffset="2" ></Polyline>
+        </Canvas>
+    </Grid>
+</Window>
