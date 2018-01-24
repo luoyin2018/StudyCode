@@ -10,18 +10,72 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock>在Grid中的Shape:</TextBlock>
-        <Rectangle Height="20" Width="20" Fill="Blue" Stroke="Black" StrokeThickness="2" />
+        <!--shape可以放在其他布局控件中-->
+        <Rectangle HorizontalAlignment="Left" Height="20" Width="20" Fill="Blue" Stroke="Black" StrokeThickness="2" />
+        <!--Line 的点是相对于宿主左上角定义的，只定义一个点的话，另一个点默认位置就是左上角顶点-->
         <Line X1="50" Y1="200" X2="400" Y2="0" StrokeThickness="2" Stroke="DarkBlue"></Line>
-
         <TextBlock Grid.Row="1" VerticalAlignment="Top">在Canvas中的Shape:</TextBlock>
-        <Canvas Grid.Row="1">
+        <Canvas Grid.Row="1" Margin="0,20">
             <Ellipse Width="100" Height="50" Canvas.Left="50" Canvas.Top="100" Fill="Black" ></Ellipse>
             <Line X1="300" Y1="200" X2="200" Y2="100" Stroke="Red" StrokeThickness="4"/>
+            <!--定义Canvas.Left和Top相当于改变了点的参考位置（默认是左上角顶点)-->
             <Polyline Canvas.Left="50" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" Fill="Blue" ></Polyline>
             <Polygon Canvas.Left="200" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" Fill="Blue" ></Polygon>
             <Polyline Canvas.Top="200" Canvas.Left="200" Points="10,100 60 10 110 110" Stroke="Green" StrokeThickness="5" StrokeDashArray="3 0.5" StrokeDashOffset="2" ></Polyline>
+            <!--线性渐变画刷-->
+            <Rectangle Canvas.Left="400" Height="100" Width="200">
+                <Rectangle.Fill>
+                    <!--所有点的位置都是相对于左上角顶点，(0,0)是左上角，(1,1)是右下角-->
+                    <!--StartPoint EndPoint不一定是0-1，这里是个相对位置的概念，如果这两个点不覆盖0，1的范围，则未覆盖部分使用stops端点处的颜色-->
+                    <!--StartPoint EndPoint也不一定要在区间0-1中-->
+                    <!--所以StartPoint和EndPoint定义的是渐变的范围,径向渐变则使用圆来定义渐变的范围-->
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0"    Color="Blue"/>
+                        <GradientStop Offset="0.5" Color="Red"/>
+                        <GradientStop Offset="1"    Color="Green"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill> 
+            </Rectangle>
+            <!--径向渐变画刷-->
+            <Ellipse Width="200" Height="200" Canvas.Top="100" Canvas.Left="400" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <!--Center RadiusX和RadiusY定义渐变的范围, 焦点定义渐变的中心-->
+                    <!--GradientOrigin可以看作另外一个圆,焦点是渐变起始的位置，渐变圆周是渐变停止的位置-->
+                    <!--要注意GradientOrigin在渐变圆外的情况-->
+                    <RadialGradientBrush GradientOrigin="0,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.1">
+                        <GradientStop Color="Yellow" Offset="0"/>
+                        <GradientStop Color="LimeGreen" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="200" Height="200" Canvas.Top="100" Canvas.Left="600" Stroke="Black" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <!--要注意GradientOrigin在渐变圆外的情况-->
+                    <RadialGradientBrush GradientOrigin="0,0" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.1">
+                        <GradientStop Color="Yellow" Offset="0"/>
+                        <GradientStop Color="LimeGreen" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
         </Canvas>
+        <!--图像画刷-->
+        <Rectangle Grid.Row="2" Height="100">
+            <Rectangle.Fill>
+            <!--Stretch定义的拉伸行为,UniformToFill可能会裁切-->
+                <ImageBrush ImageSource="pic/demo.png" Stretch="UniformToFill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle Grid.Row="3" Height="100">
+            <Rectangle.Fill>
+            <!--Viewport定义图像大小和位置-->
+            <!--ViewBox用来定义图像显示的部分，起点和长宽，相对于显示的图像而言-->
+            <!--TileMode图像复制的模式-->
+                <ImageBrush ImageSource="pic/demo.png" Viewport="0,0,0.2,0.2"  Viewbox="0,0,1,1" Stretch="Uniform" TileMode="Tile" />
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>
