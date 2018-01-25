@@ -12,12 +12,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock>在Grid中的Shape:</TextBlock>
         <!--shape可以放在其他布局控件中-->
         <Rectangle HorizontalAlignment="Left" Height="20" Width="20" Fill="Blue" Stroke="Black" StrokeThickness="2" />
         <!--Line 的点是相对于宿主左上角定义的，只定义一个点的话，另一个点默认位置就是左上角顶点-->
-        <Line X1="50" Y1="200" X2="400" Y2="0" StrokeThickness="2" Stroke="DarkBlue"></Line>
+        <Line X1="50" Y1="50" X2="400" Y2="0" StrokeThickness="2" Stroke="DarkBlue"></Line>
         <TextBlock Grid.Row="1" VerticalAlignment="Top">在Canvas中的Shape:</TextBlock>
         <Canvas Grid.Row="1" Margin="0,20">
             <Ellipse Width="100" Height="50" Canvas.Left="50" Canvas.Top="100" Fill="Black" ></Ellipse>
@@ -33,7 +34,8 @@
                     <!--StartPoint EndPoint不一定是0-1，这里是个相对位置的概念，如果这两个点不覆盖0，1的范围，则未覆盖部分使用stops端点处的颜色-->
                     <!--StartPoint EndPoint也不一定要在区间0-1中-->
                     <!--所以StartPoint和EndPoint定义的是渐变的范围,径向渐变则使用圆来定义渐变的范围-->
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <!-- 对于线性画刷而言，方向只要是平行的，效果就是一样的，对线具体在哪个位置没要求如(0,0) (1,0) 和(0,2)(1,2)是一回事-->
+                    <LinearGradientBrush StartPoint="0,2" EndPoint="1,2">
                         <GradientStop Offset="0"    Color="Blue"/>
                         <GradientStop Offset="0.5" Color="Red"/>
                         <GradientStop Offset="1"    Color="Green"/>
@@ -63,13 +65,13 @@
             </Ellipse>
         </Canvas>
         <!--图像画刷-->
-        <Rectangle Grid.Row="2" Height="100">
+        <Rectangle Grid.Row="2" Height="50">
             <Rectangle.Fill>
             <!--Stretch定义的拉伸行为,UniformToFill可能会裁切-->
                 <ImageBrush ImageSource="pic/demo.png" Stretch="UniformToFill"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle Grid.Row="3" Height="100">
+        <Rectangle Grid.Row="3" Height="50">
             <Rectangle.Fill>
             <!--Viewport定义图像大小和位置-->
             <!--ViewBox用来定义图像显示的部分，起点和长宽，相对于显示的图像而言-->
@@ -77,5 +79,28 @@
                 <ImageBrush ImageSource="pic/demo.png" Viewport="0,0,0.2,0.2"  Viewbox="0,0,1,1" Stretch="Uniform" TileMode="Tile" />
             </Rectangle.Fill>
         </Rectangle>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+        <!--VisulaBrush-->
+            <Rectangle x:Name="test" Grid.Row="4" Height="150" Width="100">
+                <Rectangle.Fill>
+                <!--指定Visual有两种方式，一种是直接创建一个Visual对象，另一种使用已有visual,界面上所有可视化元素都继承自visual?-->
+                    <VisualBrush>
+                        <VisualBrush.Visual>
+                            <StackPanel>
+                                <Rectangle Width="25" Height="25" Fill="Red" Margin="2"/>
+                                <TextBlock >Hello world</TextBlock>
+                                <Button>按钮</Button>
+                            </StackPanel>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Margin="16,0" Grid.Row="4" Height="150" Width="100">
+                <Rectangle.Fill>
+                <!--第二种方式,可以通过变换来创建一些效果：如反射(倒影效果)和放大-->
+                    <VisualBrush Visual="{Binding ElementName=test}"></VisualBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
     </Grid>
 </Window>
