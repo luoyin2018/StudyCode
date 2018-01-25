@@ -101,6 +101,11 @@
                     <VisualBrush Visual="{Binding ElementName=test}"></VisualBrush>
                 </Rectangle.Fill>
             </Rectangle>
+            <Button Content="Hello,Clip">
+                <Button.Clip>
+                    <RectangleGeometry  Rect="0 50 100 50"/>
+                </Button.Clip>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
