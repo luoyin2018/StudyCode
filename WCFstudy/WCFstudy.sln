@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFstudy", "WCFstudy\WCFstudy.csproj", "{DFFD07DC-719A-4B2B-8A5D-CC332550790E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldService", "HelloWorldService\HelloWorldService.csproj", "{0B4BF5E4-1451-4FD9-A14A-004657484656}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFFD07DC-719A-4B2B-8A5D-CC332550790E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFFD07DC-719A-4B2B-8A5D-CC332550790E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFFD07DC-719A-4B2B-8A5D-CC332550790E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFFD07DC-719A-4B2B-8A5D-CC332550790E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4BF5E4-1451-4FD9-A14A-004657484656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4BF5E4-1451-4FD9-A14A-004657484656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4BF5E4-1451-4FD9-A14A-004657484656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4BF5E4-1451-4FD9-A14A-004657484656}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
