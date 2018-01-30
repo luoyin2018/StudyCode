@@ -10,7 +10,7 @@ namespace HelloWorldService
 
     //Step 2: 使用ServiceContract特性来定义服务契约
     [ServiceContract]
-    interface IService
+    public interface IService
     {
         //Step3: 使用OperationContract特性来定义服务操作(一个服务契约由一组服务操作构成）
         [OperationContract]
