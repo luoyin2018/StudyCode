@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerateCollection", "Enum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContravariantAndCovariant", "ContravariantAndCovariant\ContravariantAndCovariant.csproj", "{C438615B-EB9F-4A7A-A03C-FD0D9175BF56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesAndEvents", "DelegatesAndEvents\DelegatesAndEvents.csproj", "{379F8060-0AF5-4871-9D3E-0A96209BD6F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDelegateExample", "AsyncDelegateExample\AsyncDelegateExample.csproj", "{44BD99D5-6761-4D32-96BC-94E2697A355B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C438615B-EB9F-4A7A-A03C-FD0D9175BF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C438615B-EB9F-4A7A-A03C-FD0D9175BF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C438615B-EB9F-4A7A-A03C-FD0D9175BF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379F8060-0AF5-4871-9D3E-0A96209BD6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379F8060-0AF5-4871-9D3E-0A96209BD6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379F8060-0AF5-4871-9D3E-0A96209BD6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379F8060-0AF5-4871-9D3E-0A96209BD6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BD99D5-6761-4D32-96BC-94E2697A355B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BD99D5-6761-4D32-96BC-94E2697A355B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BD99D5-6761-4D32-96BC-94E2697A355B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BD99D5-6761-4D32-96BC-94E2697A355B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
