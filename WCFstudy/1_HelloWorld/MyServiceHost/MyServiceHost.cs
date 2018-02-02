@@ -39,7 +39,7 @@ namespace MyServiceHost
         //Step 4: 调用ServiceHost实例的Open方法
         public void Open()
         {
-            Console.WriteLine("服务启动...");
+            Console.WriteLine("服务启动中...");
             myHost.Open();
             Console.WriteLine("已启动");
         }

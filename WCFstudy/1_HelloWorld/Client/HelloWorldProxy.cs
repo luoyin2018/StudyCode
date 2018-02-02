@@ -33,7 +33,7 @@ namespace Client
 
         public string HelloWorld(string name)
         {
-            return Channel.HelloWorld(name);   // Channel是？？
+            return Channel.HelloWorld(name);   // Channel是通道，通道可视为一组协议栈
         }
     }
 }
